@@ -27,7 +27,7 @@
 ```bash
 # Если используете git
 git clone <repository-url>
-cd tests_from_screenshot
+cd testcases_generator
 ```
 
 #### 2. Создайте виртуальное окружение
@@ -55,7 +55,7 @@ copy .env.example .env
 # на ваш реальный API ключ
 ```
 
-Содержимое `.env`:
+Содержимое нового `.env`:
 ```env
 MENTORPIECE_API_KEY=ваш_api_ключ_здесь
 FLASK_ENV=development
@@ -76,7 +76,7 @@ python app.py
 #### 1. Клонируйте или загрузите проект
 ```bash
 git clone <repository-url>
-cd tests_from_screenshot
+cd testcases_generator
 ```
 
 #### 2. Создайте виртуальное окружение
@@ -125,7 +125,7 @@ python app.py
 3. Получите ваш API ключ в разделе "Settings"
 4. Скопируйте ключ и добавьте его в файл `.env`:
    ```
-   MENTORPIECE_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxx   FLASK_ENV=development
+   MENTORPIECE_API_KEY=mentorpiece_xxxxxxxxxx   FLASK_ENV=development
    FLASK_DEBUG=True   ```
 
 ---
@@ -133,7 +133,7 @@ python app.py
 ## 📁 Структура проекта
 
 ```
-tests_from_screenshot/
+testcases_generator/
 ├── app.py                          # Основное Flask приложение
 ├── requirements.txt                 # Python зависимости
 ├── .env.example                     # Пример файла конфигурации
@@ -153,7 +153,7 @@ tests_from_screenshot/
    - Перейдите на `http://localhost:5000` в браузер
 
 2. **Опишите форму**
-   - В текстовом поле опишите поля формы, их типы и ограничения
+   - В текстовом поле опишите поля формы, на которую необходимо сгенерировать тест-кейсы, их типы и ограничения
    - Пример: "Email поле (обязательное, валидация email), Пароль (минимум 8 символов), Чекбокс 'Запомнить меня'"
 
 3. **Сгенерируйте тест-кейсы**
@@ -164,7 +164,9 @@ tests_from_screenshot/
 
 4. **Оцените качество (опционально)**
    - Нажмите кнопку "⭐ Оценить с помощью LLM-as-a-judge"
-   - **Второй этап**: Модель Claude анализирует и оценивает тест-кейсы   - Если Claude возвращает ошибку, применяется fallback на `google/gemma-3-27b-it`   - Получите оценку по 10-балльной шкале
+   - **Второй этап**: Модель Claude анализирует и оценивает тест-кейсы   
+   - Если Claude возвращает ошибку, применяется fallback на `google/gemma-3-27b-it`   
+   - Модель проставляет оценку по 10-балльной шкале
 
 5. **Создайте новые тест-кейсы**
    - Нажмите "🔄 Создать новые тест-кейсы" для нового описания формы
@@ -361,7 +363,7 @@ FLASK_DEBUG=True
 
 ---
 
-## 📞 Поддержка и контакты
+## Решение проблем
 
 При возникновении проблем:
 
@@ -371,11 +373,6 @@ FLASK_DEBUG=True
 4. Убедитесь, что используется Python 3.10 или выше (`python --version`)
 5. Попробуйте перезагрузить приложение
 
----
-
-## 📄 Лицензия
-
-MIT License
 
 ---
 

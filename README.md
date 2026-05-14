@@ -34,9 +34,24 @@ cd testcases_generator
 ```bash
 # Создание виртуального окружения
 python -m venv venv
+```
 
-# Активация виртуального окружения
-venv\Scripts\activate
+#### 2.1. Активация виртуального окружения
+- В командной строке Windows (CMD):
+```bash
+venv\Scripts\activate.bat
+```
+- В PowerShell:
+```powershell
+.
+\venv\Scripts\Activate.ps1
+```
+
+Если в PowerShell возникает ошибка `running scripts is disabled on this system`, выполните сначала:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.
+\venv\Scripts\Activate.ps1
 ```
 
 #### 3. Установите зависимости
